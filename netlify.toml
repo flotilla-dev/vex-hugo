@@ -6,3 +6,12 @@
   HUGO_VERSION = "0.73.0"
   HUGO_THEME = "repo"
   HUGO_BASEURL = "/"
+
+[[headers]]
+for = "/*"
+[headers.values]
+    #  Multi-value headers are expressed with multi-line strings
+  Strict-Transport-Security = '''
+    max-age=63072000,
+    includeSubDomains,
+    preload'''
