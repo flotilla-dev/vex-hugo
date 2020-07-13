@@ -1,7 +1,7 @@
 ############################# banner ############################
 banner:
   enable : true
-  title : "Build your Cellular IoT Infrastructure"
+  title : "Build your Cellular IoT Devices"
   content : "We help in creating cellular IoT Infrastructure at blazing speed. It is hard and we know it, so we are building it to help you focus on what you do best: the application"
   placeholder : "Your Email Address Here"
   image : "images/network.png"
@@ -18,31 +18,31 @@ product:
 ############################# Feature ############################
 features:
   enable : true
-  title : "Why RapidFleet"
-  # image : "images/watch-2.png"
+  title : "RapidFleet is for Cellular Fleet Owners"
+  image : "images/electronics.png"
 
   # feature at the left of the image
   left_side:
     # feature item loop
   - title : "Rapid IoT Development"
-    icon : "tf-ion-ios-alarm-outline"
+    icon : "tf-ion-ios-speedometer"
     content : "Cellular IoT SDK to accelerate time to market"
     
     # feature item loop
   - title : "Embedded Development Devops"
-    icon : "tf-ion-ios-bell-outline"
+    icon : " tf-ion-android-settings"
     content : "Devops for creating build, test, release, deployment of firmware"
 
   # feature at the right of the image
   right_side:
     # feature item loop
-  - title : "Device Provisioning"
-    icon : "tf-ion-ios-alarm-outline"
-    content : "Provision devices faster"
+  - title : "Fleet Management"
+    icon : " tf-ion-android-cloud "
+    content : "Deploy and manage your devices at scale with us"
 
     # feature item loop
   - title : "Device Diagnostics and Updates"
-    icon : "tf-ion-ios-bell-outline"
+    icon : "tf-ion-ios-medical"
     content : "Collect cellular telemetry faster and enable updates to your devices"
 
 
