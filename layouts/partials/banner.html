@@ -12,21 +12,18 @@
 			<div class="col-md-6 align-self-center text-center text-md-left">
 				<div class="block">
 					<h1 class="font-weight-bold mb-4 font-size-60">{{ .title | markdownify }}</h1>
-					<p class="mb-4">{{ .content | markdownify }}</p>
+					<p class="font-weight-normal mb-4">{{ .content | markdownify }}</p>
 					{{- end }}
-					<button class="snipcart-add-item btn btn-main" 
-					  {{with $data.homepage.product }} data-item-id="{{ .name | urlize }}__{{ .price }}"
-						data-item-name="{{ .name }}"
-						data-item-image="{{ .image | absURL }}"
-						data-item-price="{{ .price }}" data-item-url="{{ .Permalink }}" 
-						{{ if .colors }}
-						data-item-custom1-name="Choose Color"
-						data-item-custom1-options="{{ range $index, $element:= .colors }}{{ if eq $index 0 }}{{ . | title }}{{ else }}|{{ . | title }}{{ end }}{{ end }}"
-						{{ end }}
-						{{ if .sizes }} 
-						data-item-custom2-name="Choose Size"
-						data-item-custom2-options="{{ range $index, $element:= .sizes }}{{ if eq $index 0 }}{{ . | title }}{{ else }}|{{ . | title }}{{ end }}{{ end }}"
-						{{ end }}{{ end }}>{{ $data.homepage.banner.button }}</button>
+					<div class="input-group">
+						<form action="{{ site.Params.mailchimp_form_action }}" method="post" class="w-100" name="mc-embedded-subscribe-form" target="_blank">
+							<input type="email" id="email" class="form-control" name="email" placeholder="Your email address here"
+							  required>
+							<button class="btn btn-main btn-submit" type="submit" name="subscribe">{{i18n "subscribe"}}</button>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true">
+							  <input type="text" name="{{ site.Params.mailchimp_form_name }}" tabindex="-1">
+							</div>
+						  </form>
+					</div>
 				</div>
 			</div>
 		</div><!-- .row close -->
